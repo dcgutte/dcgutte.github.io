@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>DCG</title>
+  <title>DCG</title>
 <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="footer, address, phone, icons" />
 <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="basic.css">
 <script type = "text/javascript" src = "nav.js" ></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,28 +17,257 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <style>
+body {
+  margin: 0;
+  padding:0;
+}
+
+nav{
+  width:100%;
+  background: #11ad8b ;
+  overflow:auto;
+}
+ul{
+  padding:0;
+  margin:0 0 0 150px;
+  list-style: none;
+
+}
+li{
+  float:left;
+
+}
+.logo img{
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 15px;
+  /*width: 80px;*/
+}
+
+nav ul li{
+  font-weight: 900;
+  width:100px;
+  display:block;
+  padding:20px 30px;
+  text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
+  color:#f2f2f2;
+  text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+  ul{
+  padding:0;
+  margin:0 0 0 100px;
+  list-style: none;
+
+  }
+  nav{
+    height:52px;
+  }
+     nav ul li{
+      
+    width:50px;
+    display:block;
+    padding:20px 15px;
+    text-decoration: none;
+    font-family: "Times New Roman", Times, serif;
+    color:#f2f2f2;
+    text-align: center;
+  }   
+
+  .logo img{
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 80px;
+  }
+}
+.hero-image {
+  background-image: url("blackbuck.JPG");
+  background-color: #cccccc;
+  height: 600px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hero-text h3{
+  color:darkblue;
+  font-size: 18px;
+}
+h4{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+</style>
 </head>
-<body >
-	 <!--
+<body style="background-color:black;">
+   <!--
 ========================================================
  NAVIGATION
 ========================================================
   -->
-	<div class="topnav" id="myTopnav">
-		<div class="w3-container w3-lobster">
-  <a href="index.html" class="active w3-large">DCG logo</a>
-  <a href="#about">About</a>
-  <a href="#awards">Awards</a>
-  <a href="#contact">Contact</a></div>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
-<div id="box">
-<img src="blackbuck.JPG" class = "a" width="1440" height="852">
-<img src="dc_cover.jpg" class = "b">
-<span class="text">I am a wildlife photographer, a social worker and I professionally work in the police department. I am honored with a lot of awards and citations in the above-mentioned fields. This website is an online representation of my workspace.</span>
+
+<div class="logo"><a href="#"><img style="width:80px" src="005.png"></a></div>
+<nav>
+  <ul>
+  <li><a href="index.html"> Home</a></li>
+  <li><a href="about.html"> About</a></li>
+  <li><a href="blog.html"> Blog</a></li>
+  <li><a href="#"> Contact</a></li>
+</ul>
+</nav>
+<!--
+========================================================
+ Background image
+========================================================
+  -->
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:40px;font-family:Book Antiqua;font-weight: bold;"><br><br>Dhananjay Gutte</h1>
+    <h3>Photographer<br>Maharashtra Police<br>Anti Superstition Volunteer</h3>
+  </div>
 </div>
 
+<!--
+========================================================
+ types of images
+========================================================
+  -->
+<h4>click on the images below to explore. currently only birds folder is active.</h4>
+<div class="responsive">
+  <div class="gallery">
+    <a  href="wild.html">
+      <img src="wild_animals/tiger.jpg" alt="wild animals" width="600" height="400">
+    </a>
+    <div class="desc">WILD ANIMALS</div>
+  </div>
+</div>  
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a  href="birds.html">
+      <img src="birds/spotted_owl.jpg" alt="birds" width="600" height="400">
+    </a>
+    <div class="desc">BIRDS</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a  href="snakes.html">
+      <img src="snakes/cobra.jpg" alt="snakes" width="600" height="400">
+    </a>
+    <div class="desc">SNAKES</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a  href="nature.html">
+      <img src="nature/wheat2.jpg" alt="nature" width="600" height="400">
+    </a>
+    <div class="desc">NATURE</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a  href="insect.html">
+      <img src="insects/plain_tiger.jpg" alt="insects" width="600" height="400">
+    </a>
+    <div class="desc">BUTTERFLIES</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a  href="flower.html">
+      <img src="flowers/jungle_geranium_flower.jpg" alt="annis" width="600" height="400">
+    </a>
+    <div class="desc">FLOWERS</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a  href="#">
+      <img src="personal/dc_cover.jpg" alt="personal" width="600" height="400">
+    </a>
+    <div class="desc">PERSONAL</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a  href="#">
+      <img src="videos/vlc.png" alt="personal" width="600" height="400">
+    </a>
+    <div class="desc">VIDEOS</div>
+  </div>
+</div>
+
+
+<!--
+========================================================
+ Footer
+========================================================
+  -->
+
+<div>
+<footer class="footer-distributed">
+    <div class="footer-left">
+    <img src="006.png">
+    </div>
+ 
+    <div class="footer-center">
+ 
+    <div>
+    <i class="fa fa-map-marker"></i>
+    <p><span>Latur</span> Maharashtra, India</p>
+    </div>
+ 
+    <div>
+    <i class="fa fa-phone"></i>
+    <p>+91 97650 ****1</p>
+    </div>
+ 
+    <div>
+    <i class="fa fa-envelope"></i>
+    <p><a href="mailto:support@company.com">dcgutte@gmail.com</a></p>
+    </div>
+    <div class="footer-icons">
+ 
+    <a href="https://www.facebook.com/dhananjaysnakefriend"><i class="fa fa-facebook"></i></a>
+    <a href="https://www.instagram.com/dhananjaygutte/"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="http://dcgutte.github.io"><i class="fa fa-github"></i></a>
+ 
+    </div>
+    </div>
+ 
+    <div class="footer-right">
+    <img src="mhp3.png">
+    </div>
+ 
+    </footer>
+</div>
 </body>
 </html>

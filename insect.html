@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 1px 1px;
+  cursor: pointer;
+  padding: 10px;
+    display:block;
+    background-color: red;
+    color: white;
+    text-align:center;
+    position: absolute;
+    top: 15px;
+    right: 8px;
+    border-radius: 8px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 450px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 60px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+.row > .column {
+  padding: 0 2px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 95%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+</style>
+<body>
+
+<h2 style="text-align:center">FLOWERS</h2>
+<a onclick="goBack()" class="button">Back</a>
+
+<script>
+function goBack() {
+  window.history.go(-1);
+}
+</script>
+<h5>click on the image to get better view<h5>
+
+<div class="row">
+  <div class="column">
+        
+        <img src="insects/crimson_rose.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+        <img src="insects/danied_eggfly.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+        <img src="insects/crimson_rose2.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+        <img src="insects/plains_cupid.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+        <img src="insects/lemon_pansy.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+        
+        <img src="insects/common_leopard.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+        <img src="insects/lime_butterfly.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+        <img src="insects/plain_tiger.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+        <img src="insects/plain_tige_catterpiller.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+        <img src="insects/istrugia_sp_geometridae.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+        <img src="insects/yellow_orange_tip.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+                
+  </div>
+  <div class="column">
+        <img src="insects/common_lime.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+        <img src="insects/common_emmigrant.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(13)" class="hover-shadow cursor">
+        <img src="insects/yellow_pansy.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
+        <img src="insects/chameleon.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(15)" class="hover-shadow cursor">
+        <img src="insects/blue_tiger.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(16)" class="hover-shadow cursor">
+        <img src="insects/spotted_joker.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(17)" class="hover-shadow cursor">
+            
+  </div>
+  <div class="column">
+        <img src="insects/motted_emmigrant.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(18)" class="hover-shadow cursor">
+        <img src="insects/common_evening_brown.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(19)" class="hover-shadow cursor">
+        <img src="insects/common_crow.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(20)" class="hover-shadow cursor">
+        <img src="insects/gram_blue.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(21)" class="hover-shadow cursor">
+        <img src="insects/blue_pansy.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(22)" class="hover-shadow cursor">
+        <img src="insects/danaid_eggfly.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(23)" class="hover-shadow cursor">
+            
+  </div>
+  
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+<!--put here </div> to get effect of arrow stability -->
+    
+  <div class="mySlides">
+      <div class="numbertext">1 / 23</div>
+      <img src="insects/crimson_rose.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">2 / 23</div>
+      <img src="insects/danied_eggfly.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">3 / 23</div>
+      <img src="insects/crimson_rose2.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">4 / 23</div>
+      <img src="insects/plains_cupid.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">5 / 23</div>
+      <img src="insects/lemon_pansy.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">6 / 23</div>
+      <img src="insects/common_leopard.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">7 / 23</div>
+      <img src="insects/lime_butterfly.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">8 / 23</div>
+      <img src="insects/plain_tiger.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">9 / 23</div>
+      <img src="insects/plain_tige_catterpiller.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">10 / 23</div>
+      <img src="insects/istrugia_sp_geometridae.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">11 / 23</div>
+      <img src="insects/yellow_orange_tip.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">12 / 23</div>
+      <img src="insects/common_lime.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">13 / 23</div>
+      <img src="insects/common_emmigrant.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">14 / 23</div>
+      <img src="insects/yellow_pansy.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">15 / 23</div>
+      <img src="insects/chameleon.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">16 / 23</div>
+      <img src="insects/blue_tiger.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">17 / 23</div>
+      <img src="insects/spotted_joker.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">18 / 23</div>
+      <img src="insects/motted_emmigrant.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">19 / 23</div>
+      <img src="insects/common_evening_brown.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">20 / 23</div>
+      <img src="insects/common_crow.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">21 / 23</div>
+      <img src="insects/gram_blue.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">22 / 23</div>
+      <img src="insects/blue_pansy.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">23 / 23</div>
+      <img src="insects/danaid_eggfly.jpg" style="width:100%">
+    </div>
+        
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="insects/crimson_rose.jpg" style="width:100%" onclick="currentSlide(1)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="insects/danied_eggfly.jpg" style="width:100%" onclick="currentSlide(2)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="insects/crimson_rose2.jpg" style="width:100%" onclick="currentSlide(3)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="insects/plains_cupid.jpg" style="width:100%" onclick="currentSlide(4)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="insects/lemon_pansy.jpg" style="width:100%" onclick="currentSlide(5)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="insects/common_leopard.jpg" style="width:100%" onclick="currentSlide(6)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="insects/lime_butterfly.jpg" style="width:100%" onclick="currentSlide(7)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="insects/plain_tiger.jpg" style="width:100%" onclick="currentSlide(8)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="insects/plain_tige_catterpiller.jpg" style="width:100%" onclick="currentSlide(9)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="insects/istrugia_sp_geometridae.jpg" style="width:100%" onclick="currentSlide(10)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="insects/yellow_orange_tip.jpg" style="width:100%" onclick="currentSlide(11)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="insects/common_lime.jpg" style="width:100%" onclick="currentSlide(12)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="insects/common_emmigrant.jpg" style="width:100%" onclick="currentSlide(13)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="insects/yellow_pansy.jpg" style="width:100%" onclick="currentSlide(14)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="insects/chameleon.jpg" style="width:100%" onclick="currentSlide(15)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="insects/blue_tiger.jpg" style="width:100%" onclick="currentSlide(16)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="insects/spotted_joker.jpg" style="width:100%" onclick="currentSlide(17)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="insects/motted_emmigrant.jpg" style="width:100%" onclick="currentSlide(18)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="insects/common_evening_brown.jpg" style="width:100%" onclick="currentSlide(19)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="insects/common_crow.jpg" style="width:100%" onclick="currentSlide(20)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="insects/gram_blue.jpg" style="width:100%" onclick="currentSlide(21)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="insects/blue_pansy.jpg" style="width:100%" onclick="currentSlide(22)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="insects/danaid_eggfly.jpg" style="width:100%" onclick="currentSlide(23)" alt="">
+    </div>
+    
+
+
+
+
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+</body>
+</html>

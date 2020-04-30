@@ -1,0 +1,91 @@
+lines of html
+
+<img src="birds/jungle_owl.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+<img src="birds/grey_heron.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+<img src="birds/bat.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+<img src="birds/spotted_owl.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+<img src="birds/booted_eagle.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+<img src="birds/bar_headed_goose.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+<img src="birds/eurassian_spoonbill.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+<img src="birds/oriental_honey_buzzard.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+<img src="birds/black_headed_ibis.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+<img src="birds/pochard.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+<img src="birds/mottled_wood_owl.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+<img src="birds/black_shouldered_kite.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+<img src="birds/shrike.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(13)" class="hover-shadow cursor">
+<img src="birds/black_eared_kite.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
+<img src="birds/ruddy_shelduck.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(15)" class="hover-shadow cursor">
+<img src="birds/common_stonechat.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(16)" class="hover-shadow cursor">
+<img src="birds/brahminy_kite_juvenile.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(17)" class="hover-shadow cursor">
+<img src="birds/indian_golden_oriole.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(18)" class="hover-shadow cursor">
+<img src="birds/painted_stork.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(19)" class="hover-shadow cursor">
+<img src="birds/red_rumped_swallow.jpg" alt="name" style="width:100%" onclick="openModal();currentSlide(20)" class="hover-shadow cursor">
+
+<div class="mySlides">
+      <div class="numbertext">1 / 23</div>
+      <img src="birds/jungle_owl.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">2 / 23</div>
+      <img src="birds/grey_heron.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">3 / 23</div>
+      <img src="birds/bat.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">4 / 23</div>
+      <img src="birds/spotted_owl.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">5 / 23</div>
+      <img src="birds/booted_eagle.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">6 / 23</div>
+      <img src="birds/bar_headed_goose.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">7 / 23</div>
+      <img src="birds/eurassian_spoonbill.jpg" style="width:100%">
+    </div><div class="mySlides">
+      <div class="numbertext">8 / 23</div>
+      <img src="birds/oriental_honey_buzzard.jpg" style="width:100%">
+    </div><div class="mySlides">
+      <div class="numbertext">9 / 23</div>
+      <img src="birds/black_headed_ibis.jpg" style="width:100%">
+    </div><div class="mySlides">
+      <div class="numbertext">10 / 23</div>
+      <img src="birds/pochard.jpg" style="width:100%">
+    </div><div class="mySlides">
+      <div class="numbertext">11 / 23</div>
+      <img src="birds/mottled_wood_owl.jpg" style="width:100%">
+    </div><div class="mySlides">
+      <div class="numbertext">12 / 23</div>
+      <img src="birds/black_shouldered_kite.jpg" style="width:100%">
+    </div><div class="mySlides">
+      <div class="numbertext">13 / 23</div>
+      <img src="birds/shrike.jpg" style="width:100%">
+    </div><div class="mySlides">
+      <div class="numbertext">14 / 23</div>
+      <img src="birds/black_eared_kite.jpg" style="width:100%">
+    </div><div class="mySlides">
+      <div class="numbertext">15 / 23</div>
+      <img src="birds/ruddy_shelduck.jpg" style="width:100%">
+    </div><div class="mySlides">
+      <div class="numbertext">16 / 23</div>
+      <img src="birds/common_stonechat.jpg" style="width:100%">
+    </div><div class="mySlides">
+      <div class="numbertext">17 / 23</div>
+      <img src="birds/brahminy_kite_juvenile.jpg" style="width:100%">
+    </div><div class="mySlides">
+      <div class="numbertext">18 / 23</div>
+      <img src="birds/indian_golden_oriole.jpg" style="width:100%">
+    </div><div class="mySlides">
+      <div class="numbertext">19 / 23</div>
+      <img src="birds/painted_stork.jpg" style="width:100%">
+    </div><div class="mySlides">
+      <div class="numbertext">20 / 23</div>
+      <img src="birds/red_rumped_swallow.jpg" style="width:100%">
+    </div>
+
